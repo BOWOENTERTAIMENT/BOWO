@@ -207,6 +207,50 @@ body::before {
   animation: fog 30s infinite linear;
   z-index: 0;
 }
+/* Modo claro cósmico */
+body.modo-cósmico {
+  background: radial-gradient(circle at top left, #fdf6ff, #e0d4f7);
+  color: #1a0033;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.modo-cósmico header.portada {
+  background-color: #e9dfff;
+}
+
+body.modo-cósmico h1, body.modo-cósmico h2 {
+  color: #5e2ca5;
+}
+
+body.modo-cósmico nav.redes a {
+  background-color: #8f54e9;
+  color: #fff;
+}
+
+body.modo-cósmico footer {
+  background-color: #f3ecff;
+  color: #5e2ca5;
+}
+
+/* Niebla animada en el fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') repeat;
+  opacity: 0.04;
+  pointer-events: none;
+  animation: fog 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes fog {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 
 
