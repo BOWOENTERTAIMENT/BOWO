@@ -123,3 +123,26 @@ footer {
   margin-top: 3rem;
   color: #888;
 }
+body.modo-claro {
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+body.modo-claro header.portada {
+  background-color: #e5dbff;
+}
+
+body.modo-claro nav.redes a {
+  background-color: #6f42c1;
+  color: #fff;
+}
+
+body.modo-claro h1, 
+body.modo-claro h2 {
+  color: #6f42c1;
+}
+
+body.modo-claro footer {
+  background-color: #ddd;
+  color: #444;
+}
