@@ -241,16 +241,8 @@ body::before {
   width: 200%;
   height: 100%;
   background: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') repeat;
-  opacity: 0.04;
+  opacity: 0.05;
   pointer-events: none;
-  animation: fog 60s linear infinite;
-  z-index: 0;
+  animation: fog 90s linear infinite;
+  z-index: -1;
 }
-
-@keyframes fog {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-
-
