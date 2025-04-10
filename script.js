@@ -1,12 +1,16 @@
 function toggleDarkMode() {
   const body = document.body;
-  const button = document.querySelector("button");
+  const boton = document.getElementById("modoBoton");
 
   if (body.classList.contains("modo-cósmico")) {
     body.classList.remove("modo-cósmico");
-    button.textContent = "Modo Cósmico";
+    body.classList.add("modo-claro");
+    boton.textContent = "Modo Original";
+  } else if (body.classList.contains("modo-claro")) {
+    body.classList.remove("modo-claro");
+    boton.textContent = "Modo Cósmico";
   } else {
     body.classList.add("modo-cósmico");
-    button.textContent = "Modo Oscuro Místico";
+    boton.textContent = "Modo Claro";
   }
 }
