@@ -147,7 +147,10 @@ body.modo-claro footer {
   color: #444;
 }
 /* Estilos base */ body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #0a0a0a; color: #eeeeee; transition: background-color 0.5s ease, color 0.5s ease; background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); background-repeat: repeat; background-size: cover; overflow-x: hidden; }
-
+@keyframes fog {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
 body.modo-claro { background-color: #eaf3ff; color: #111; background-image: none; }
 
 /* Encabezado */ header.portada { text-align: center; background-color: #1a1a1a; padding: 2rem 1rem; position: relative; z-index: 1; }
