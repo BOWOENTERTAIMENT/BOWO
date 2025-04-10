@@ -24,10 +24,14 @@ header.portada {
 }
 
 h1 {
-  font-size: 3rem;
-  letter-spacing: 4px;
-  color: #aaa0ff;
-  text-shadow: 2px 2px 4px #000;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 3.5rem;
+  letter-spacing: 6px;
+  color: #ccc;
+  text-shadow: 0 0 10px #a580ff, 0 0 20px #5f00ff;
+  animation: glow-fade 4s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 2;
 }
 
 h2 {
