@@ -293,5 +293,13 @@ body.modo-cósmico footer { background-color: #e7ebf7; color: #5e2ca5; }
     text-shadow: 0 0 20px #ffffff, 0 0 30px #a580ff;
   }
 }
+body {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
 
 
