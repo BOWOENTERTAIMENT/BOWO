@@ -194,19 +194,7 @@ form button { align-self: center; width: 50%; }
 /* Footer */ footer { text-align: center; background-color: #111; padding: 1rem; margin-top: 3rem; color: #888; }
 
 body.modo-claro footer { background-color: #ddd; color: #444; }
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://www.transparenttextures.com/patterns/foggy-birds.png');
-  opacity: 0.05;
-  pointer-events: none;
-  animation: fog 30s infinite linear;
-  z-index: 0;
-}
+body:
 /* Modo claro cósmico */
 body.modo-cósmico {
   background: radial-gradient(circle at top left, #fdf6ff, #e0d4f7);
