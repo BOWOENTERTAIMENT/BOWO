@@ -33,3 +33,6 @@ document.querySelectorAll('.fotos img').forEach(img => {
 function cerrarPopup() {
   document.getElementById('popup-img').style.display = 'none';
 }
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
