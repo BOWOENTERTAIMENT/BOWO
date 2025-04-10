@@ -36,3 +36,14 @@ function cerrarPopup() {
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
+const observers = document.querySelectorAll(".fade-in");
+
+const appearOnScroll = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+
+observers.forEach(el => appearOnScroll.observe(el));
