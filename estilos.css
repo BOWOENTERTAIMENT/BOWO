@@ -268,5 +268,13 @@ body.modo-cósmico footer { background-color: #e7ebf7; color: #5e2ca5; }
 /* Niebla animada */ body::before { content: ""; position: fixed; top: 0; left: 0; width: 200%; height: 100%; background: url('https://media.giphy.com/media/3o6jIE6TlH8DRxX140/giphy.gif') repeat; opacity: 0.05; pointer-events: none; animation: fog 90s linear infinite; z-index: -1; }
 
 @keyframes fog { 0% { background-position: 0 0; } 100% { background-position: 1000px 0; } }
+@keyframes glow-fade {
+  0% {
+    text-shadow: 0 0 5px #a580ff, 0 0 10px #5f00ff;
+  }
+  100% {
+    text-shadow: 0 0 20px #ffffff, 0 0 30px #a580ff;
+  }
+}
 
 
