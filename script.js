@@ -20,3 +20,16 @@ function toggleCosmicMode() {
 
   body.classList.toggle("modo-cósmico");
 }
+// Mostrar imagen ampliada
+document.querySelectorAll('.fotos img').forEach(img => {
+  img.addEventListener('click', () => {
+    const popup = document.getElementById('popup-img');
+    const popupImg = popup.querySelector('img');
+    popupImg.src = img.src;
+    popup.style.display = 'flex';
+  });
+});
+
+function cerrarPopup() {
+  document.getElementById('popup-img').style.display = 'none';
+}
