@@ -97,6 +97,11 @@ main {
   max-width: 300px;
   border-radius: 12px;
   box-shadow: 0 0 10px #a680ff;
+  transition: transform 0.3s ease;
+}
+
+.fotos img:hover {
+  transform: scale(1.05);
 }
 
 form {
