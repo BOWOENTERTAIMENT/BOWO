@@ -1,0 +1,1 @@
+console.log('Modo oscuro habilitado');
