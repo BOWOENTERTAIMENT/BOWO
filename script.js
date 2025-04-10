@@ -1,1 +1,3 @@
-console.log('Modo oscuro habilitado');
+function toggleDarkMode() {
+  document.body.classList.toggle("modo-claro");
+}
