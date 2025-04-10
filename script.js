@@ -1,16 +1,22 @@
+
 function toggleDarkMode() {
   const body = document.body;
-  const boton = document.getElementById("modoBoton");
+  const modoCosmicoActivo = body.classList.contains("modo-cósmico");
 
-  if (body.classList.contains("modo-cósmico")) {
+  if (modoCosmicoActivo) {
     body.classList.remove("modo-cósmico");
-    body.classList.add("modo-claro");
-    boton.textContent = "Modo Original";
-  } else if (body.classList.contains("modo-claro")) {
-    body.classList.remove("modo-claro");
-    boton.textContent = "Modo Cósmico";
-  } else {
-    body.classList.add("modo-cósmico");
-    boton.textContent = "Modo Claro";
   }
+
+  body.classList.toggle("modo-claro");
+}
+
+function toggleCosmicMode() {
+  const body = document.body;
+  const modoClaroActivo = body.classList.contains("modo-claro");
+
+  if (modoClaroActivo) {
+    body.classList.remove("modo-claro");
+  }
+
+  body.classList.toggle("modo-cósmico");
 }
