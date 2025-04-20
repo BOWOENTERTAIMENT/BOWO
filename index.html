@@ -6,6 +6,106 @@
   <title>BÖWÖ - Percusión Electrónica y Entretenimiento</title>
   <link rel="stylesheet" href="estilos.css" />
   <script src="script.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0c1d;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .logo-principal {
+      max-width: 100%;
+      border-radius: 2rem;
+      box-shadow: 0 0 20px #a076f9;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 1rem 0;
+      color: #c8a2f7;
+      text-shadow: 2px 2px #000;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background-color: #a076f9;
+      color: white;
+      font-size: 1.8rem;
+      border: none;
+      border-radius: 50px;
+      width: 48px;
+      height: 48px;
+      z-index: 999;
+    }
+
+    .menu-links {
+      display: none;
+      position: absolute;
+      top: 4.2rem;
+      right: 1.5rem;
+      background-color: #201933;
+      padding: 1rem;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #a076f9;
+    }
+
+    .menu-links a {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      background-color: #a076f9;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .menu-visible {
+      display: block;
+    }
+
+    .redes a {
+      margin: 0 0.5rem;
+      color: #a076f9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .galeria img {
+      max-width: 200px;
+      margin: 0.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #a076f9;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 10px #25d366;
+      background-color: white;
+    }
+
+    .whatsapp-float img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  </style>
 </head>
 <body>
   <header class="portada">
@@ -26,38 +126,43 @@
     <nav class="redes">
       <a href="https://open.spotify.com/track/4vbUFbZO7hUofpPLJ1AsmT?si=fz_4yREMRSyXqg230K-p4w" target="_blank">Spotify</a>
       <a href="https://youtu.be/5-DDM8jALYw?si=6tpVTK7B5gQ03SE" target="_blank">YouTube</a>
-      <a href="https://wa.me/34665842064" target="_blank">WhatsApp</a>
       <a href="mailto:bowomusicper@gmail.com">Correo</a>
       <a href="https://www.instagram.com/bowo_music" target="_blank">Instagram</a>
     </nav>
   </header>
 
   <main>
-    <section class="galeria" id="fotos">
+    <section id="fotos" class="galeria">
       <h2>Galería / Gallery</h2>
       <div class="fotos">
-        <img src="foto1.jpg" alt="BÖWÖ en concierto" />
-        <img src="foto2.jpg" alt="Show de BÖWÖ" />
+        <img src="foto1.jpg" alt="BÖWÖ en concierto / BÖWÖ live" />
+        <img src="foto2.jpg" alt="Show de BÖWÖ / BÖWÖ Show" />
       </div>
     </section>
 
-    <section class="booking" id="contacto">
+    <section class="dossier">
+      <h2>Dossier PDF</h2>
+      <a href="Dossier_BOWO_Pitchdeck.pdf" download>Descargar Dossier / Download Dossier</a>
+    </section>
+
+    <section id="contacto" class="booking">
       <h2>Booking / Contrataciones</h2>
       <form name="contacto">
-        <input type="text" name="nombre" placeholder="Tu nombre" required />
-        <input type="email" name="email" placeholder="Tu correo" required />
-        <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-        <button type="submit">Enviar</button>
+        <input type="text" name="nombre" placeholder="Tu nombre / Your name" required />
+        <input type="email" name="email" placeholder="Tu correo / Your email" required />
+        <textarea name="mensaje" placeholder="Tu mensaje / Your message" required></textarea>
+        <button type="submit">Enviar / Send</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 BÖWÖ Música. Todos los derechos reservados.</p>
+    <p>&copy; 2025 BÖWÖ Música. Todos los derechos reservados. / All rights reserved.</p>
   </footer>
 
-  <a href="https://wa.me/34665842064" class="whatsapp-float" target="_blank">
-    <img src="logo.png" alt="WhatsApp" />
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/34665842064" class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>
 </body>
 </html>
