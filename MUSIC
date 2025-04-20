@@ -70,3 +70,89 @@
   <a href="index.html" class="volver">← Volver al inicio</a>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BÖWÖ - Música</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    body {
+      background-color: #0d0c1d;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #b58eff;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cancion {
+      border: 2px solid #5e2ca5;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      background-color: #1c1b2a;
+      box-shadow: 0 0 12px #5e2ca5;
+    }
+
+    .cancion img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .cancion h2 {
+      margin: 0.5rem 0;
+      color: #df91ff;
+    }
+
+    .cancion p {
+      margin: 0.3rem 0;
+    }
+
+    .volver {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: #5e2ca5;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .volver:hover {
+      background: #9e79ff;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Música de BÖWÖ</h1>
+
+  <div class="cancion">
+    <img src="foto1.jpg" alt="El Grito de mi Pueblo" />
+    <h2>El Grito de mi Pueblo (2002)</h2>
+    <p><strong>Colaboradores:</strong> Marvin Araya (productor y escritor), BÖWÖ (artista).</p>
+    <p><strong>Descripción:</strong> Fusión de Electrónica Latina con Marimba.</p>
+    <p><a href="https://open.spotify.com/track/6bQHpSolSF51DADgEGDnPB?si=3LLQNy9WQ4OFizGX21gHjw" target="_blank">Escuchar en Spotify</a></p>
+  </div>
+
+  <div class="cancion">
+    <img src="foto2.jpg" alt="BOWOJON" />
+    <h2>BOWOJON (2024)</h2>
+    <p><strong>Colaboradores:</strong> Ariel Quesada (productor), BÖWÖ (composición y producción).</p>
+    <p><strong>Descripción:</strong> Música electrónica pensada para bailar y fiesta.</p>
+    <p><a href="https://open.spotify.com/track/4vbUFbZO7hUofpPLJlAsmT?si=rv-gEQ0CStmQrl-tzf8gYA" target="_blank">Escuchar en Spotify</a></p>
+  </div>
+
+  <a href="index.html" class="volver">Volver al inicio</a>
+</body>
+</html>
