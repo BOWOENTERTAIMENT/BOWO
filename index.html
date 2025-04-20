@@ -21,76 +21,50 @@
     .menu-links {
       display: none;
       position: absolute;
-      top: 3rem;
+      top: 3.2rem;
       right: 1rem;
-      background-color: #222;
-      border-radius: 8px;
-      padding: 0.5rem 1rem;
+      background-color: #1c1c2b;
+      border-radius: 12px;
+      padding: 0.7rem 1rem;
       z-index: 1000;
+      box-shadow: 0 0 12px #b38aff;
     }
 
     .menu-links a {
       display: block;
-      color: white;
-      padding: 0.3rem 0;
+      color: #ffffff;
+      font-size: 1.1rem;
+      background-color: #5e3ea1;
+      padding: 0.5rem 1rem;
+      margin: 0.4rem 0;
+      border-radius: 20px;
+      text-align: center;
       text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
     }
 
     .menu-links a:hover {
-      text-decoration: underline;
+      background-color: #9e79ff;
+      color: #000;
     }
 
     .menu-visible {
       display: block;
     }
   </style>
-<style>
-  .menu-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-  }
+</head>
 
-  .menu-links {
-    display: none;
-    position: absolute;
-    top: 3.2rem;
-    right: 1rem;
-    background-color: #1c1c2b;
-    border-radius: 12px;
-    padding: 0.7rem 1rem;
-    z-index: 1000;
-    box-shadow: 0 0 12px #b38aff;
-  }
-
-  .menu-links a {
-    display: block;
-    color: #ffffff;
-    font-size: 1.1rem;
-    background-color: #5e3ea1;
-    padding: 0.5rem 1rem;
-    margin: 0.4rem 0;
-    border-radius: 20px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease;
-  }
-
-  .menu-links a:hover {
-    background-color: #9e79ff;
-    color: #000;
-  }
-
-  .menu-visible {
-    display: block;
-  }
-</style>
+<body>
+  <header class="portada">
+    <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">⋮</button>
+    <div class="menu-links">
+      <a href="biografia.html">Biografía</a>
+      <a href="musica.html">Música</a>
+      <a href="#fotos">Fotos</a>
+      <a href="shows.html">Shows</a>
+      <a href="#contacto">Contacto</a>
+    </div>
 
     <img src="portada-nueva.jpg" alt="BÖWÖ" class="logo-principal" />
     <h1>BÖWÖ</h1>
@@ -105,6 +79,7 @@
       <a href="https://www.instagram.com/bowo_music" target="_blank">Instagram</a>
     </nav>
   </header>
+
   <main>
     <section id="fotos" class="galeria">
       <h2>Galería / Gallery</h2>
