@@ -14,68 +14,82 @@
       font-family: Arial, sans-serif;
     }
 
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    .logo-principal {
-      max-width: 100%;
-      border-radius: 2rem;
-      box-shadow: 0 0 20px #a076f9;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin: 1rem 0;
-      color: #c8a2f7;
-      text-shadow: 2px 2px #000;
-    }
-
     .menu-toggle {
       position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      background-color: #a076f9;
-      color: white;
-      font-size: 1.8rem;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+      background: #835aff;
       border: none;
-      border-radius: 50px;
-      width: 48px;
-      height: 48px;
-      z-index: 999;
+      border-radius: 999px;
+      color: white;
+      padding: 0.3rem 1rem;
+      z-index: 1001;
+      box-shadow: 0 0 12px #835aff;
     }
 
     .menu-links {
       display: none;
       position: absolute;
-      top: 4.2rem;
-      right: 1.5rem;
-      background-color: #201933;
+      top: 4rem;
+      right: 1rem;
+      background-color: #1c1c2b;
       padding: 1rem;
       border-radius: 20px;
-      box-shadow: 0 0 10px #a076f9;
+      z-index: 1000;
+      box-shadow: 0 0 12px #835aff;
     }
 
     .menu-links a {
       display: block;
       margin: 0.5rem 0;
-      padding: 0.5rem 1rem;
-      background-color: #a076f9;
+      padding: 0.6rem 1rem;
+      background-color: #5e3ea1;
       border-radius: 10px;
-      color: white;
-      text-decoration: none;
+      color: #fff;
       font-weight: bold;
       text-align: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .menu-links a:hover {
+      background-color: #9e79ff;
+      color: black;
     }
 
     .menu-visible {
       display: block;
     }
 
+    .portada {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .portada img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #835aff;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 1rem;
+      color: #b68aff;
+      text-shadow: 0 0 10px #835aff;
+    }
+
+    p {
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+
     .redes a {
-      margin: 0 0.5rem;
-      color: #a076f9;
+      display: inline-block;
+      margin: 0.5rem;
+      color: #83aaff;
       text-decoration: none;
       font-weight: bold;
     }
@@ -84,26 +98,33 @@
       max-width: 200px;
       margin: 0.5rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px #a076f9;
+      box-shadow: 0 0 10px #b3aaff;
     }
 
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 1000;
+      z-index: 999;
       width: 55px;
       height: 55px;
       border-radius: 50%;
       overflow: hidden;
-      box-shadow: 0 0 10px #25d366;
       background-color: white;
+      box-shadow: 0 0 10px #25d366;
     }
 
     .whatsapp-float img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -112,7 +133,7 @@
     <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">☰</button>
     <div class="menu-links">
       <a href="biografia.html">Biografía</a>
-      <a href="musica.html">Música</a>
+      <a href="music.html">Música</a>
       <a href="#fotos">Fotos</a>
       <a href="shows.html">Shows</a>
       <a href="#contacto">Contacto</a>
@@ -121,12 +142,13 @@
     <img src="portada-nueva.jpg" alt="BÖWÖ" class="logo-principal" />
     <h1>BÖWÖ</h1>
     <p>Música electrónica que fusiona ritmos y sonidos autóctonos de tambores, instrumentos étnicos del mundo, marimba y otras percusiones en vivo.</p>
-    <p><em>Electronic music that blends rhythms and native sounds of drums, ethnic instruments from around the world, marimba, and live percussion.</em></p>
+    <p><em>Electronic music that blends rhythms and native sounds of drums, ethnic instruments from around the world, marimba, and other live percussion.</em></p>
 
     <nav class="redes">
-      <a href="https://open.spotify.com/track/4vbUFbZO7hUofpPLJ1AsmT?si=fz_4yREMRSyXqg230K-p4w" target="_blank">Spotify</a>
+      <a href="https://open.spotify.com/artist/4hL10OlXe0v8ynr2DCIgPa" target="_blank">Spotify</a>
       <a href="https://youtu.be/5-DDM8jALYw?si=6tpVTK7B5gQ03SE" target="_blank">YouTube</a>
       <a href="mailto:bowomusicper@gmail.com">Correo</a>
+      <a href="https://wa.me/34665842064" target="_blank">WhatsApp</a>
       <a href="https://www.instagram.com/bowo_music" target="_blank">Instagram</a>
     </nav>
   </header>
@@ -134,7 +156,7 @@
   <main>
     <section id="fotos" class="galeria">
       <h2>Galería / Gallery</h2>
-      <div class="fotos">
+      <div>
         <img src="foto1.jpg" alt="BÖWÖ en concierto / BÖWÖ live" />
         <img src="foto2.jpg" alt="Show de BÖWÖ / BÖWÖ Show" />
       </div>
