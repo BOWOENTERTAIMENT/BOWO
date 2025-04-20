@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BÖWÖ - Percusión Electrónica y Entretenimiento</title>
+  <title>BÖWÖ – Percusión Electrónica y Entretenimiento</title>
   <link rel="stylesheet" href="estilos.css" />
   <script src="script.js" defer></script>
   <style>
@@ -129,13 +129,12 @@
     }
   </style>
 </head>
-
 <body>
   <header class="portada">
     <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">☰</button>
     <div class="menu-links">
       <a href="biografia.html">Biografía</a>
-      <a href="musica.html">Música</a>
+      <a href="music.html">Música</a>
       <a href="#fotos">Fotos</a>
       <a href="shows.html">Shows</a>
       <a href="#contacto">Contacto</a>
@@ -148,3 +147,45 @@
 
     <nav class="redes">
       <a href="https://open.spotify.com/artist/4hL10OlXe0v8ynr2DCIgPa" target="_blank">Spotify</a>
+      <a href="https://youtu.be/5-DDM8jALYw?si=6tpVtK7B5gQQ3SEf" target="_blank">YouTube</a>
+      <a href="mailto:bowomusicper@gmail.com">Correo</a>
+      <a href="https://wa.me/34665842064" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/bowo_music" target="_blank">Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="fotos" class="galeria">
+      <h2>Galería / Gallery</h2>
+      <div>
+        <img src="foto1.jpg" alt="BÖWÖ en concierto / BÖWÖ live" />
+        <img src="foto2.jpg" alt="Show de BÖWÖ / BÖWÖ Show" />
+      </div>
+    </section>
+
+    <section class="dossier">
+      <h2>Dossier PDF</h2>
+      <a href="Dossier_BOWO_Pitchdeck.pdf" download>Descargar Dossier / Download Dossier</a>
+    </section>
+
+    <section id="contacto" class="booking">
+      <h2>Booking / Contrataciones</h2>
+      <form name="contacto">
+        <input type="text" name="nombre" placeholder="Tu nombre / Your name" required />
+        <input type="email" name="email" placeholder="Tu correo / Your email" required />
+        <textarea name="mensaje" placeholder="Tu mensaje / Your message" required></textarea>
+        <button type="submit">Enviar / Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BÖWÖ Música. Todos los derechos reservados. / All rights reserved.</p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/34665842064" class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+</body>
+</html>
