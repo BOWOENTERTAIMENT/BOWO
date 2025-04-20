@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BÖWÖ - Música</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    body {
+      background-color: #0d0c1d;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #b38aff;
+    }
+
+    .cancion {
+      margin-bottom: 3rem;
+    }
+
+    .cancion img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #b38aff;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      max-width: 350px;
+      height: 80px;
+    }
+
+    .volver {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: #5e3ea1;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .volver:hover {
+      background: #9e79ff;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Música de BÖWÖ</h1>
+
+  <div class="cancion">
+    <img src="portada-cancion.jpg" alt="Portada de la canción" />
+    <p><strong>Título:</strong> Fuego Ancestral</p>
+    <p><strong>Año:</strong> 2024</p>
+    <p><strong>Colaboradores:</strong> Tamela Hedström (voz), BÖWÖ (percusión y producción)</p>
+    <p><strong>Descripción:</strong> Esta canción mezcla sonidos étnicos, beats electrónicos y voces poderosas para despertar lo espiritual. Un viaje sonoro para bailar y conectar.</p>
+    <iframe src="https://open.spotify.com/embed/track/4vbUFbZO7hUofpPLJlAsmT?utm_source=generator" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <a href="index.html" class="volver">← Volver al inicio</a>
+</body>
+</html>
