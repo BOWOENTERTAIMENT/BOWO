@@ -44,17 +44,53 @@
       display: block;
     }
   </style>
-</head>
-<body>
-  <header class="portada">
-    <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">⋮</button>
-    <div class="menu-links">
-      <a href="biografia.html">Biografía</a>
-      <a href="musica.html">Música</a>
-      <a href="#fotos">Fotos</a>
-      <a href="shows.html">Shows</a>
-      <a href="#contacto">Contacto</a>
-    </div>
+<style>
+  .menu-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+  }
+
+  .menu-links {
+    display: none;
+    position: absolute;
+    top: 3.2rem;
+    right: 1rem;
+    background-color: #1c1c2b;
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+    z-index: 1000;
+    box-shadow: 0 0 12px #b38aff;
+  }
+
+  .menu-links a {
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+    background-color: #5e3ea1;
+    padding: 0.5rem 1rem;
+    margin: 0.4rem 0;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  .menu-links a:hover {
+    background-color: #9e79ff;
+    color: #000;
+  }
+
+  .menu-visible {
+    display: block;
+  }
+</style>
 
     <img src="portada-nueva.jpg" alt="BÖWÖ" class="logo-principal" />
     <h1>BÖWÖ</h1>
