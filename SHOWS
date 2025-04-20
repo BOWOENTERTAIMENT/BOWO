@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BÖWÖ - Shows</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    body {
+      background-color: #0d0c1d;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #b38aff;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #b38aff;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    .volver {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: #5e3ea1;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .volver:hover {
+      background: #9e79ff;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tipos de Shows</h1>
+
+  <iframe src="https://www.youtube.com/embed/5-DDM8jALYw?si=6tpVTK7B5gOO3SE" frameborder="0" allowfullscreen></iframe>
+
+  <ul>
+    <li><strong>Show Étnico-Electrónico:</strong> BÖWÖ fusiona percusión en vivo con sonidos ancestrales y beats modernos para festivales, eventos culturales y celebraciones místicas.</li>
+    <li><strong>Live DJ Percusión:</strong> Perfecto para bares, clubes o fiestas privadas. BÖWÖ se une al DJ en vivo con tambores, pads electrónicos y marimba.</li>
+    <li><strong>Performance Escénica:</strong> Con vestuario, visuales y atmósfera envolvente, este show se adapta a escenarios grandes o colaboraciones artísticas.</li>
+  </ul>
+
+  <a href="index.html" class="volver">← Volver al inicio</a>
+</body>
+</html>
