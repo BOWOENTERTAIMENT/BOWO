@@ -13,31 +13,36 @@
       padding: 2rem;
       line-height: 1.6;
     }
-
     h1 {
       color: #b3aaff;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px #835aff;
     }
-
+    h2 {
+      color: #83aaff;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.4rem;
+    }
     iframe, video {
       width: 100%;
       max-width: 560px;
       height: 315px;
-      margin-bottom: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #b3aaff;
+      margin: 1rem auto;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #835aff;
     }
-
     ul {
       padding-left: 1.2rem;
+      max-width: 800px;
+      margin: auto;
     }
-
     li {
       margin-bottom: 1rem;
     }
-
     .volver {
       display: inline-block;
       margin-top: 2rem;
@@ -48,7 +53,6 @@
       border-radius: 10px;
       font-weight: bold;
     }
-
     .volver:hover {
       background-color: #9e79ff;
       color: black;
@@ -56,26 +60,29 @@
   </style>
 </head>
 <body>
-
   <h1>Tipos de Shows</h1>
 
-  <!-- Video YouTube -->
-  <iframe src="https://www.youtube.com/embed/5-DDM8jALvY?si=6tpvTK7B5gQ035E" frameborder="0" allowfullscreen></iframe>
-
-  <!-- Video MP4 subido -->
+  <h2>Show grabado en vivo (MP4)</h2>
   <video controls>
-    <source src="VID-20250212-WA0004.mp4" type="video/mp4">
-    Tu navegador no soporta videos HTML5.
+    <source src="VID-20250212-WA0004.mp4" type="video/mp4" />
+    Tu navegador no soporta video HTML5.
   </video>
 
-  <!-- Descripción -->
+  <h2>Show visual con tambores y beats</h2>
+  <iframe src="https://www.youtube.com/embed/5-DDM8jALYw" frameborder="0" allowfullscreen></iframe>
+
+  <h2>Presentación en vivo con efectos visuales</h2>
+  <iframe src="https://www.youtube.com/embed/oCTQWPkFGFU" frameborder="0" allowfullscreen></iframe>
+
+  <h2>Actuación artística en escenario</h2>
+  <iframe src="https://www.youtube.com/embed/ZLTlODHF9Ls" frameborder="0" allowfullscreen></iframe>
+
   <ul>
     <li><strong>Show Étnico-Electrónico:</strong> BÖWÖ fusiona percusión en vivo con sonidos ancestrales y beats modernos.</li>
-    <li><strong>Live DJ Percusión:</strong> Perfecto para bares, clubes o fiestas privadas. BÖWÖ se une al DJ en vivo con ritmos tribales.</li>
-    <li><strong>Performance Escénica:</strong> Con vestuario, visuales y atmósfera envolvente, este show se adapta a espacios teatrales o alternativos.</li>
+    <li><strong>Live DJ Percusión:</strong> Perfecto para bares, clubes o fiestas privadas. BÖWÖ se une al DJ en vivo con percusión tribal.</li>
+    <li><strong>Performance Escénica:</strong> Con vestuario, visuales y atmósfera envolvente, este show se adapta a espacios escénicos y culturales.</li>
   </ul>
 
   <a href="index.html" class="volver">← Volver al inicio</a>
-
 </body>
 </html>
