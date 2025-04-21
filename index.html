@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BÖWÖ - Percusión Electrónica y Entretenimiento</title>
   <link rel="stylesheet" href="estilos.css" />
   <script src="script.js" defer></script>
@@ -11,108 +11,22 @@
       background-color: #0d0c1d;
       color: white;
       font-family: Arial, sans-serif;
-    }
-    .menu-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 2rem;
-      cursor: pointer;
-      background: #835aff;
-      border: none;
-      border-radius: 999px;
-      color: white;
-      padding: 0.3rem 1rem;
-      z-index: 1001;
-      box-shadow: 0 0 12px #835aff;
-    }
-    .menu-links {
-      display: none;
-      position: absolute;
-      top: 4rem;
-      right: 1rem;
-      background-color: #1c1c2b;
-      padding: 1rem;
-      border-radius: 20px;
-      z-index: 1000;
-      box-shadow: 0 0 12px #835aff;
-    }
-    .menu-links a {
-      display: block;
-      margin: 0.5rem 0;
-      padding: 0.6rem 1rem;
-      background-color: #5e3ea1;
-      border-radius: 10px;
-      color: #fff;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-    .menu-links a:hover {
-      background-color: #9e79ff;
-      color: black;
-    }
-    .menu-visible {
-      display: block;
-    }
-    .portada {
-      text-align: center;
-      padding: 2rem;
-    }
-    .portada img {
-      max-width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 0 20px #835aff;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-top: 1rem;
-      color: #b68aff;
-      text-shadow: 0 0 10px #835aff;
-    }
-    p {
-      font-size: 1.2rem;
-      padding: 1rem;
-    }
-    .redes a {
-      display: inline-block;
-      margin: 0.5rem;
-      color: #83aaff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .galeria img {
-      max-width: 200px;
-      margin: 0.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #b3aaff;
-    }
-    .volver {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.6rem 1.2rem;
-      background-color: #5e2ca5;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-    .volver:hover {
-      background-color: #9e79ff;
-      color: black;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
+    }.qr-section {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.qr-section img {
+  max-width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #835aff;
+}
+
   </style>
 </head>
 <body>
   <header class="portada">
-    <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">☰</button>
+    <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">&#9776;</button>
     <div class="menu-links">
       <a href="biografia.html">Biografía</a>
       <a href="music.html">Música</a>
@@ -126,7 +40,7 @@
     <p><em>Electronic music that blends rhythms and native sounds of drums, ethnic instruments from around the world, marimba, and live percussion.</em></p>
     <nav class="redes">
       <a href="https://open.spotify.com/artist/4hL10OlXe0v8ynr2DCIgPa" target="_blank">Spotify</a>
-      <a href="https://youtu.be/5-DDM8jALYw?si=6tpVTK7B5gQQ3SEf" target="_blank">YouTube</a>
+      <a href="https://youtu.be/5-DDM8jALYw?si=6tpVtK7B5gQQ3SEf" target="_blank">YouTube</a>
       <a href="mailto:bowomusicper@gmail.com">Correo</a>
       <a href="https://wa.me/34665842064" target="_blank">WhatsApp</a>
       <a href="https://www.instagram.com/bowo_music" target="_blank">Instagram</a>
@@ -138,7 +52,6 @@
         <img src="foto1.jpg" alt="BÖWÖ en concierto / BÖWÖ live" />
         <img src="foto2.jpg" alt="Show de BÖWÖ / BÖWÖ Show" />
       </div>
-      <a href="fotos.html" class="volver">Ver toda la galería / View full gallery</a>
     </section><section class="dossier">
   <h2>Dossier PDF</h2>
   <a href="Dossier_BOWO_Pitchdeck.pdf" download>Descargar Dossier / Download Dossier</a>
@@ -152,10 +65,11 @@
     <textarea name="mensaje" placeholder="Tu mensaje / Your message" required></textarea>
     <button type="submit">Enviar / Send</button>
   </form>
-  <div style="margin-top: 2rem; text-align: center;">
-    <p>Escanea para más info:</p>
-    <img src="qrbowo.jpg" alt="QR BOWO" style="max-width: 150px; border-radius: 10px; box-shadow: 0 0 10px #835aff;" />
-  </div>
+</section>
+
+<section class="qr-section">
+  <h2>Escanea para más info:</h2>
+  <img src="qrbowo.jpg" alt="QR BÖWÖ" />
 </section>
 
   </main>  <footer>
