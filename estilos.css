@@ -204,3 +204,19 @@ body::before {
   0% { background-position: 0 0; }
   100% { background-position: 1000px 0; }
 }
+
+.qr-seccion {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.qr-seccion h2 {
+  color: #b68aff;
+  margin-bottom: 1rem;
+}
+
+.qr-img {
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #b68aff;
+}
