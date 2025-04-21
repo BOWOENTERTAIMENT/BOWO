@@ -2,71 +2,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galería de Fotos | BÖWÖ</title>
+  <title>BÖWÖ - Percusión Electrónica y Entretenimiento</title>
   <link rel="stylesheet" href="estilos.css" />
+  <script src="script.js" defer></script>
   <style>
     body {
+      margin: 0;
       background-color: #0d0c1d;
       color: white;
       font-family: Arial, sans-serif;
-      padding: 1rem;
-    }h1 {
-  text-align: center;
-  color: #b68aff;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.galeria img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 12px #835aff;
-  transition: transform 0.3s ease;
+    }.menu-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
   cursor: pointer;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-}
-
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.9);
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 16px;
-}
-
-.volver {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #5e2ca5;
+  background: #835aff;
+  border: none;
+  border-radius: 999px;
   color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
+  padding: 0.3rem 1rem;
+  z-index: 1001;
+  box-shadow: 0 0 12px #835aff;
 }
 
-.volver:hover {
+.menu-links {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  background-color: #1c1c2b;
+  padding: 1rem;
+  border-radius: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 12px #835aff;
+}
+
+.menu-links a {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.6rem 1rem;
+  background-color: #5e3ea1;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.menu-links a:hover {
   background-color: #9e79ff;
   color: black;
+}
+
+.menu-visible {
+  display: block;
+}
+
+.portada {
+  text-align: center;
+  padding: 2rem;
+}
+
+.portada img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #835aff;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: #b68aff;
+  text-shadow: 0 0 10px #835aff;
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.galeria-preview {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.galeria-preview img {
+  max-width: 150px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #b3aaff;
+  transition: transform 0.3s ease;
+}
+
+.galeria-preview img:hover {
+  transform: scale(1.1);
+}
+
+.ver-galeria {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #9e79ff;
+  text-decoration: underline;
+}
+
+.booking {
+  padding: 2rem;
 }
 
 .qr-container {
@@ -91,36 +136,58 @@
   margin: 0 auto;
 }
 
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
   </style>
 </head>
 <body>
-  <h1>Galería / Gallery</h1>
-  <section class="galeria">
-    <img src="20250209_161413.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="FB_IMG_1742252036662.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="FB_IMG_174225204322.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="FB_IMG_1742252048563.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="IMG-20250209-WA0003.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="IMG-20250213-WA0018.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="IMG-20250213-WA0019.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="IMG-20250213-WA0020.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="IMG-20250302-WA0028.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="IMG-20250302-WA0056.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-    <img src="IMG-20250302-WA0063.jpg" alt="Foto BÖWÖ" onclick="showLightbox(this.src)" />
-  </section>  <div class="lightbox" onclick="this.style.display='none'">
-    <img src="" alt="Imagen ampliada" />
-  </div>  <script>
-    function showLightbox(src) {
-      const lightbox = document.querySelector(".lightbox");
-      lightbox.style.display = "flex";
-      lightbox.querySelector("img").src = src;
-    }
-  </script>  <div style="text-align:center; margin-top: 3rem;">
-    <a href="index.html" class="volver">Volver al inicio</a>
-  </div>  <div class="qr-container">
-    <div class="qr-wrapper">
-      <img src="qrbowo.jpg" alt="QR BOWÖ">
+  <header class="portada">
+    <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">☰</button>
+    <div class="menu-links">
+      <a href="biografia.html">Biografía</a>
+      <a href="music.html">Música</a>
+      <a href="fotos.html">Fotos</a>
+      <a href="shows.html">Shows</a>
+      <a href="#contacto">Contacto</a>
     </div>
+    <img src="portada-nueva.jpg" alt="BÖWÖ" class="logo-principal" />
+    <h1>BÖWÖ</h1>
+    <p>Música electrónica que fusiona ritmos y sonidos autóctonos de tambores, instrumentos étnicos del mundo, marimba y otras percusiones en vivo.</p><nav class="redes">
+  <a href="https://open.spotify.com/artist/4h1O0lXEv08ynr2DCIgPa" target="_blank">Spotify</a>
+  <a href="https://youtube.com" target="_blank">YouTube</a>
+  <a href="mailto:bowomusicper@gmail.com">Correo</a>
+  <a href="https://wa.me/34665842064" target="_blank">WhatsApp</a>
+  <a href="https://www.instagram.com/bowo_music" target="_blank">Instagram</a>
+</nav>
+
+  </header>  <main>
+    <section class="galeria-preview">
+      <a href="fotos.html"><img src="IMG-20250213-WA0018.jpg" alt="Foto BÖWÖ" /></a>
+      <a href="fotos.html"><img src="IMG-20250213-WA0019.jpg" alt="Foto BÖWÖ" /></a>
+    </section>
+    <a class="ver-galeria" href="fotos.html">Ver galería completa</a><section id="contacto" class="booking">
+  <h2>Booking / Contrataciones</h2>
+  <form name="contacto">
+    <input type="text" name="nombre" placeholder="Tu nombre / Your name" required />
+    <input type="email" name="email" placeholder="Tu correo / Your email" required />
+    <textarea name="mensaje" placeholder="Tu mensaje / Your message" required></textarea>
+    <button type="submit">Enviar / Send</button>
+  </form>
+</section>
+
+<div class="qr-container">
+  <div class="qr-wrapper">
+    <img src="qrbowo.jpg" alt="QR BOWÖ">
   </div>
+</div>
+
+  </main>  <footer>
+    <p>&copy; 2025 BÖWÖ Música. Todos los derechos reservados. / All rights reserved.</p>
+  </footer>
 </body>
 </html>
