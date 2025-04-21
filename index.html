@@ -12,24 +12,24 @@
       color: white;
       font-family: Arial, sans-serif;
     }.menu-toggle {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
   font-size: 2rem;
   cursor: pointer;
-  background: #835aff;
+  background-color: #835aff;
   border: none;
-  border-radius: 999px;
+  border-radius: 50%;
   color: white;
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1rem;
   z-index: 1001;
   box-shadow: 0 0 12px #835aff;
 }
 
 .menu-links {
   display: none;
-  position: absolute;
-  top: 4rem;
+  position: fixed;
+  top: 4.5rem;
   right: 1rem;
   background-color: #1c1c2b;
   padding: 1rem;
@@ -45,9 +45,9 @@
   background-color: #5e3ea1;
   border-radius: 10px;
   color: #fff;
-  font-weight: bold;
   text-align: center;
   text-decoration: none;
+  font-weight: bold;
   font-size: 1.2rem;
 }
 
@@ -83,90 +83,111 @@ p {
   padding: 1rem;
 }
 
-.redes a {
-  display: inline-block;
-  margin: 0.5rem;
-  color: #b3aaff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.galeria-principal {
+.galeria-preview {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 2rem 0;
+  flex-direction: column;
+  align-items: center;
 }
 
-.galeria-principal img {
-  max-width: 200px;
-  border-radius: 10px;
+.galeria-preview img {
+  max-width: 300px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
   box-shadow: 0 0 10px #b3aaff;
 }
 
-.galeria-principal a {
-  text-align: center;
-  display: block;
+.ver-mas {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #5e2ca5;
+  color: white;
+  border-radius: 10px;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.ver-mas:hover {
+  background-color: #9e79ff;
+  color: black;
+}
+
+.booking {
+  text-align: center;
+  padding: 2rem;
+}
+
+.booking input,
+.booking textarea {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.booking button {
+  padding: 0.8rem 1.5rem;
+  background-color: #835aff;
   color: white;
   font-weight: bold;
-  margin-top: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 12px #835aff;
+}
+
+.qr-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.qr-section img {
+  max-width: 120px;
+  border-radius: 20px;
+  box-shadow: 0 0 12px #b3aaff;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
   font-size: 0.9rem;
   margin-top: 3rem;
+  padding: 1rem;
 }
 
   </style>
 </head>
 <body>
-  <header class="portada">
-    <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">☰</button>
-    <div class="menu-links">
-      <a href="biografia.html">Biografía</a>
-      <a href="music.html">Música</a>
-      <a href="fotos.html">Fotos</a>
-      <a href="shows.html">Shows</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-    <img src="portada-nueva.jpg" alt="BÖWÖ" class="logo-principal" />
+  <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">☰</button>
+  <div class="menu-links">
+    <a href="biografia.html">Biografía</a>
+    <a href="music.html">Música</a>
+    <a href="fotos.html">Fotos</a>
+    <a href="shows.html">Shows</a>
+    <a href="#contacto">Contacto</a>
+  </div>  <section class="portada">
+    <img src="portada-nueva.jpg" alt="BÖWÖ" />
     <h1>BÖWÖ</h1>
     <p>Música electrónica que fusiona ritmos y sonidos autóctonos de tambores, instrumentos étnicos del mundo, marimba y otras percusiones en vivo.</p>
-  </header>  <nav class="redes" style="text-align:center">
-    <a href="https://open.spotify.com/artist/4h1O0lXKe0v8ynr2DCIgPa" target="_blank">Spotify</a>
-    <a href="https://youtu.be/5-DDM8jALYw?si=6tpVTK7B5gQQ3SE" target="_blank">YouTube</a>
-    <a href="mailto:bowomusicper@gmail.com">Correo</a>
-    <a href="https://wa.me/34665842064" target="_blank">WhatsApp</a>
-    <a href="https://www.instagram.com/bowo_music" target="_blank">Instagram</a>
-  </nav>  <main>
-    <section class="galeria-principal">
-      <img src="FB_IMG_1742252036662.jpg" alt="BÖWÖ en vivo 1">
-      <img src="IMG-20250209-WA0003.jpg" alt="BÖWÖ en vivo 2">
-      <a href="fotos.html">Ver galería completa</a>
-    </section><section class="dossier" style="text-align:center">
-  <h2>Dossier PDF</h2>
-  <a href="Dossier_BOWO_Pitchdeck.pdf" download>Descargar Dossier / Download Dossier</a>
-</section>
-
-<section id="contacto" class="booking" style="text-align:center">
-  <h2>Booking / Contrataciones</h2>
-  <form name="contacto">
-    <input type="text" name="nombre" placeholder="Tu nombre / Your name" required />
-    <input type="email" name="email" placeholder="Tu correo / Your email" required />
-    <textarea name="mensaje" placeholder="Tu mensaje / Your message" required></textarea>
-    <button type="submit">Enviar / Send</button>
-  </form>
-  <p>Escanea para más info:</p>
-<div class="qr-container">
-  <img src="qrbowo.jpg" alt="QR BOWÖ">
-  QR BOWÖ
-</div>
-
-  </main>  <footer>
+  </section>  <section class="galeria-preview">
+    <h2>Galería / Gallery</h2>
+    <img src="IMG-20250213-WA0019.jpg" alt="Preview 1" />
+    <img src="IMG-20250213-WA0020.jpg" alt="Preview 2" />
+    <a href="fotos.html" class="ver-mas">Ver galería completa</a>
+  </section>  <section id="contacto" class="booking">
+    <h2>Booking / Contrataciones</h2>
+    <form name="contacto">
+      <input type="text" name="nombre" placeholder="Tu nombre / Your name" required />
+      <input type="email" name="email" placeholder="Tu correo / Your email" required />
+      <textarea name="mensaje" placeholder="Tu mensaje / Your message" required></textarea>
+      <button type="submit">Enviar / Send</button>
+    </form>
+  </section>  <section class="qr-section">
+    <p>Escanea para más info:</p>
+    <img src="qrbowo.jpg" alt="QR BOWO" />
+  </section>  <footer>
     <p>&copy; 2025 BÖWÖ Música. Todos los derechos reservados. / All rights reserved.</p>
   </footer>
 </body>
