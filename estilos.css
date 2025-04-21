@@ -1,240 +1,183 @@
-/* Base */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0a0a0a;
-  color: #eeeeee;
-  overflow-x: hidden;
+  background-color: #0d0c1d;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-header.portada {
-  text-align: center;
-  background-color: #1a1a1a;
-  padding: 2rem 1rem;
-  position: relative;
+/* Botón de menú hamburguesa */
+.menu-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  background: #835aff;
+  border: none;
+  border-radius: 999px;
+  color: white;
+  padding: 0.3rem 1rem;
+  z-index: 1001;
+  box-shadow: 0 0 12px #835aff;
 }
 
-.logo-principal {
-  width: 100%;
-  max-width: 600px;
+/* Enlaces del menú desplegable */
+.menu-links {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  background-color: #1c1c2b;
+  padding: 1rem;
   border-radius: 20px;
-  box-shadow: 0 0 20px #a680ff;
-  margin-bottom: 1rem;
+  z-index: 1000;
+  box-shadow: 0 0 12px #835aff;
+}
+
+.menu-links a {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.6rem 1rem;
+  background-color: #5e3ea1;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu-links a:hover {
+  background-color: #9e79ff;
+  color: black;
+}
+
+.menu-visible {
+  display: block;
+}
+
+.portada {
+  text-align: center;
+  padding: 2rem;
+}
+
+.portada img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #835aff;
 }
 
 h1 {
   font-size: 3rem;
-  letter-spacing: 4px;
-  color: #c4a1ff;
-  text-shadow: 2px 2px 4px #000;
+  margin-top: 1rem;
+  color: #b68aff;
+  text-shadow: 0 0 10px #835aff;
 }
 
-h2 {
-  font-size: 2rem;
-  color: #b58eff;
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
+p {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.redes {
+  text-align: center;
   margin-top: 2rem;
 }
 
-p, li {
-  line-height: 1.6;
-  font-size: 1.1rem;
-}
-
-nav.redes {
-  margin: 1rem 0;
-}
-
-nav.redes a {
-  color: #ffffff;
-  background-color: #9966ff;
-  padding: 0.5rem 1rem;
-  margin: 0.2rem;
-  border-radius: 20px;
-  text-decoration: none;
+.redes a {
   display: inline-block;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-nav.redes a:hover {
-  background-color: #7a4dff;
-  color: #000;
-}
-
-button {
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
-  font-weight: bold;
-  background-color: #7a4dff;
-  border: none;
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 20px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  color: #fff;
+  background-color: #835aff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #835aff;
 }
 
-button:hover {
-  background-color: #b280ff;
-  color: #000;
+.redes a:hover {
+  background-color: #9e79ff;
+  color: black;
 }
 
-main {
-  padding: 1rem 2rem;
+/* Estilo galería pequeña */
+.galeria {
+  text-align: center;
+  margin: 2rem 0;
 }
 
-/* Galería con efecto zoom */
-.fotos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.fotos img {
-  width: 45%;
+.galeria img {
   max-width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #a680ff;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b3aaff;
   transition: transform 0.3s ease;
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
-.fotos img:hover {
-  transform: scale(1.1);
+.galeria img:hover {
+  transform: scale(1.05);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  max-width: 500px;
-  margin: auto;
-  margin-top: 1rem;
+/* Estilo para el contenedor QR */
+.qr-container {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #4b0082;
+  box-shadow: 0 0 20px #835aff;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin: 2rem auto;
 }
 
-form input, form textarea {
-  padding: 10px;
-  border-radius: 8px;
+.qr-container img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+/* Booking */
+.booking {
+  padding: 2rem;
+  text-align: center;
+}
+
+.booking input,
+.booking textarea {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 0.8rem;
+  border-radius: 10px;
   border: none;
   font-size: 1rem;
 }
 
-form button {
-  align-self: center;
-  width: 50%;
+.booking button {
+  background-color: #835aff;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #835aff;
+}
+
+.booking button:hover {
+  background-color: #9e79ff;
+  color: black;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  background-color: #111;
-  padding: 1rem;
+  padding: 2rem;
+  font-size: 0.9rem;
   margin-top: 3rem;
-  color: #888;
-}
-
-/* Modo Cósmico */
-body.modo-claro {
-  background-color: #f9f9f9;
-  color: #111;
-}
-
-body.modo-claro header.portada {
-  background-color: #e5dbff;
-}
-
-body.modo-claro nav.redes a {
-  background-color: #6f42c1;
-  color: #fff;
-}
-
-body.modo-claro h1,
-body.modo-claro h2 {
-  color: #6f42c1;
-}
-
-body.modo-claro footer {
-  background-color: #ddd;
-  color: #444;
-}
-
-.qr-container {
-  display: inline-block;
-  padding: 1rem;
-  border-radius: 12px;
-  background-color: #000;
-  box-shadow: 0 0 20px #a56eff, 0 0 30px #a56eff inset;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-top: 1rem;
-}
-.qr-container img {
-  max-width: 100px;
-  display: block;
-  margin: 0 auto 0.5rem auto;
-}
-
-body.modo-cósmico {
-  background: radial-gradient(circle at top left, #fd6fff, #0e0447);
-  color: #f0f0f0;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-body.modo-cósmico header.portada {
-  background-color: #9d6bff;
-}
-
-body.modo-cósmico h1, body.modo-cósmico h2 {
-  color: #fff;
-}
-
-body.modo-cósmico nav.redes a {
-  background-color: #8f54e9;
-  color: #fff;
-}
-
-body.modo-cósmico footer {
-  background-color: #3e2caf;
-  color: #e5c2a5;
-}
-
-/* Niebla animada */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background: url('https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif') repeat;
-  opacity: 0.03;
-  pointer-events: none;
-  animation: fog 90s linear infinite;
-  z-index: -1;
-}
-
-@keyframes fog {
-  0% { background-position: 0 0; }
-  100% { background-position: 1000px 0; }
-}
-
-.qr-seccion {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.qr-seccion h2 {
-  color: #b68aff;
-  margin-bottom: 1rem;
-}
-
-.qr-img {
-  max-width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px #b68aff;
+  color: #aaa;
 }
