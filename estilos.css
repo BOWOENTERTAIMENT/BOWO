@@ -21,7 +21,7 @@ body {
   box-shadow: 0 0 12px #835aff;
 }
 
-/* Enlaces del menú desplegable */
+/* Menú desplegable */
 .menu-links {
   display: none;
   position: absolute;
@@ -41,9 +41,9 @@ body {
   background-color: #5e3ea1;
   border-radius: 10px;
   color: #fff;
+  font-weight: bold;
   text-align: center;
   text-decoration: none;
-  font-weight: bold;
   font-size: 1.2rem;
 }
 
@@ -56,6 +56,7 @@ body {
   display: block;
 }
 
+/* Portada y logo */
 .portada {
   text-align: center;
   padding: 2rem;
@@ -74,98 +75,90 @@ h1 {
   text-shadow: 0 0 10px #835aff;
 }
 
+h2 {
+  font-size: 2rem;
+  color: #b68aff;
+  margin: 2rem 0 1rem 0;
+  text-align: center;
+}
+
 p {
   font-size: 1.2rem;
   padding: 1rem;
+  text-align: center;
 }
 
+/* Redes sociales */
 .redes {
   text-align: center;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .redes a {
   display: inline-block;
   margin: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
   background-color: #835aff;
   color: white;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 0 10px #835aff;
 }
 
 .redes a:hover {
-  background-color: #9e79ff;
-  color: black;
+  background-color: #a385ff;
 }
 
-/* Estilo galería pequeña */
+/* Galería */
 .galeria {
-  text-align: center;
-  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .galeria img {
   max-width: 300px;
-  margin: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #b3aaff;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #835aff;
   transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
 .galeria img:hover {
   transform: scale(1.05);
 }
 
-/* Estilo para el contenedor QR */
-.qr-container {
-  display: inline-block;
-  padding: 1rem;
-  border-radius: 20px;
-  background-color: #4b0082;
-  box-shadow: 0 0 20px #835aff;
+/* Dossier y booking */
+.dossier, .booking {
   text-align: center;
-  color: white;
-  font-weight: bold;
-  margin: 2rem auto;
-}
-
-.qr-container img {
-  max-width: 150px;
-  display: block;
-  margin: 0 auto 0.5rem;
-}
-
-/* Booking */
-.booking {
   padding: 2rem;
-  text-align: center;
 }
 
-.booking input,
-.booking textarea {
-  display: block;
+.booking form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking input, .booking textarea {
+  margin: 0.5rem;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 10px;
   width: 90%;
   max-width: 400px;
-  margin: 1rem auto;
-  padding: 0.8rem;
-  border-radius: 10px;
-  border: none;
-  font-size: 1rem;
 }
 
 .booking button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
   background-color: #835aff;
   color: white;
-  font-size: 1.1rem;
-  padding: 0.7rem 2rem;
   border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #835aff;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 12px #835aff;
 }
 
 .booking button:hover {
@@ -178,10 +171,10 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  margin-top: 3rem;
   color: #aaa;
 }
 
+/* Botón de WhatsApp flotante */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -199,4 +192,25 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* Código QR */
+.qr-container {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #1c1c2b;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 0 20px #835aff;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.qr-container img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
 }
