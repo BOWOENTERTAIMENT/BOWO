@@ -161,6 +161,24 @@ body.modo-claro footer {
   color: #444;
 }
 
+.qr-container {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #000;
+  box-shadow: 0 0 20px #a56eff, 0 0 30px #a56eff inset;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+.qr-container img {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+}
+
 body.modo-cósmico {
   background: radial-gradient(circle at top left, #fd6fff, #0e0447);
   color: #f0f0f0;
