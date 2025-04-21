@@ -15,16 +15,19 @@
     }
 
     h1 {
-      color: #b38aff;
+      color: #b3aaff;
     }
 
-    iframe {
+    iframe, video {
       width: 100%;
       max-width: 560px;
       height: 315px;
       margin-bottom: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 0 15px #b38aff;
+      box-shadow: 0 0 15px #b3aaff;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     ul {
@@ -47,22 +50,32 @@
     }
 
     .volver:hover {
-      background: #9e79ff;
+      background-color: #9e79ff;
       color: black;
     }
   </style>
 </head>
 <body>
+
   <h1>Tipos de Shows</h1>
 
-  <iframe src="https://www.youtube.com/embed/5-DDM8jALYw?si=6tpVTK7B5gOO3SE" frameborder="0" allowfullscreen></iframe>
+  <!-- Video YouTube -->
+  <iframe src="https://www.youtube.com/embed/5-DDM8jALvY?si=6tpvTK7B5gQ035E" frameborder="0" allowfullscreen></iframe>
 
+  <!-- Video MP4 subido -->
+  <video controls>
+    <source src="VID-20250212-WA0004.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+
+  <!-- Descripción -->
   <ul>
-    <li><strong>Show Étnico-Electrónico:</strong> BÖWÖ fusiona percusión en vivo con sonidos ancestrales y beats modernos para festivales, eventos culturales y celebraciones místicas.</li>
-    <li><strong>Live DJ Percusión:</strong> Perfecto para bares, clubes o fiestas privadas. BÖWÖ se une al DJ en vivo con tambores, pads electrónicos y marimba.</li>
-    <li><strong>Performance Escénica:</strong> Con vestuario, visuales y atmósfera envolvente, este show se adapta a escenarios grandes o colaboraciones artísticas.</li>
+    <li><strong>Show Étnico-Electrónico:</strong> BÖWÖ fusiona percusión en vivo con sonidos ancestrales y beats modernos.</li>
+    <li><strong>Live DJ Percusión:</strong> Perfecto para bares, clubes o fiestas privadas. BÖWÖ se une al DJ en vivo con ritmos tribales.</li>
+    <li><strong>Performance Escénica:</strong> Con vestuario, visuales y atmósfera envolvente, este show se adapta a espacios teatrales o alternativos.</li>
   </ul>
 
   <a href="index.html" class="volver">← Volver al inicio</a>
+
 </body>
 </html>
