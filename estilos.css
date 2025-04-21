@@ -214,3 +214,10 @@ footer {
   margin-bottom: 0.5rem;
   border-radius: 10px;
 }
+
+.logo-dragon {
+  max-width: 250px;
+  display: block;
+  margin: 1rem auto;
+  filter: drop-shadow(0 0 10px #835aff);
+}
