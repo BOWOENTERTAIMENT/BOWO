@@ -38,22 +38,6 @@
       transform: scale(1.05);
     }
 
-    .volver {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.6rem 1.2rem;
-      background-color: #5e2ca5;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-
-    .volver:hover {
-      background-color: #9e79ff;
-      color: black;
-    }
-
     .lightbox {
       display: none;
       position: fixed;
@@ -70,6 +54,22 @@
       max-width: 90%;
       max-height: 90%;
       border-radius: 16px;
+    }
+
+    .volver {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #5e2ca5;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .volver:hover {
+      background-color: #9e79ff;
+      color: black;
     }
   </style>
 </head>
@@ -101,6 +101,8 @@
     }
   </script>
 
-  <a href="index.html" class="volver">Volver al inicio</a>
+  <div style="text-align:center;">
+    <a href="index.html" class="volver">Volver al inicio</a>
+  </div>
 </body>
 </html>
