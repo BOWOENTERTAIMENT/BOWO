@@ -1,129 +1,66 @@
-  <!DOCTYPE html><html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería | BÖWÖ</title>
-  <style>
-    body {
-      background-color: #0d0c1d;
-      color: white;
-      font-family: Arial, sans-serif;
-      padding: 1rem;
-      margin: 0;
-    }h1 {
-  text-align: center;
-  color: #b68aff;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.galeria img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 12px #835aff;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-}
-
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.9);
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 16px;
-}
-
-.volver {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #5e2ca5;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-.volver:hover {
-  background-color: #9e79ff;
-  color: black;
-}
-
-.qr-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-.qr-wrapper {
-  background-color: #000;
-  border-radius: 20px;
-  padding: 1rem;
-  box-shadow: 0 0 20px #a56eff, 0 0 30px #a56eff inset;
-  display: inline-block;
-}
-
-.qr-wrapper img {
-  max-width: 100px;
-  display: block;
-  margin: 0 auto;
-}
-
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BÖWÖ - Percusión Electrónica y Entretenimiento</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Galería de Fotos</h1>
-  <section class="galeria">
-    <img src="20250209_161413.jpg" alt="Foto 1" onclick="showLightbox(this.src)">
-    <img src="FB_IMG_1742252036662.jpg" alt="Foto 2" onclick="showLightbox(this.src)">
-    <img src="FB_IMG_174225204322.jpg" alt="Foto 3" onclick="showLightbox(this.src)">
-    <img src="FB_IMG_1742252048563.jpg" alt="Foto 4" onclick="showLightbox(this.src)">
-    <img src="IMG-20250209-WA0003.jpg" alt="Foto 5" onclick="showLightbox(this.src)">
-    <img src="IMG-20250213-WA0018.jpg" alt="Foto 6" onclick="showLightbox(this.src)">
-    <img src="IMG-20250213-WA0019.jpg" alt="Foto 7" onclick="showLightbox(this.src)">
-    <img src="IMG-20250213-WA0020.jpg" alt="Foto 8" onclick="showLightbox(this.src)">
-    <img src="IMG-20250302-WA0028.jpg" alt="Foto 9" onclick="showLightbox(this.src)">
-    <img src="IMG-20250302-WA0056.jpg" alt="Foto 10" onclick="showLightbox(this.src)">
-    <img src="IMG-20250302-WA0063.jpg" alt="Foto 11" onclick="showLightbox(this.src)">
-  </section>  <div class="lightbox" onclick="this.style.display='none'">
-    <img src="" alt="Ampliada">
-  </div>  <script>
-    function showLightbox(src) {
-      const lightbox = document.querySelector(".lightbox");
-      lightbox.style.display = "flex";
-      lightbox.querySelector("img").src = src;
-    }
-  </script>  <div style="text-align:center; margin-top: 3rem;">
-    <a href="index.html" class="volver">Volver al inicio</a>
-  </div>  <div class="qr-container">
-    <div class="qr-wrapper">
-      <img src="qrbowo.jpg" alt="QR BOWÖ">
-    </div>
+  <header class="portada">
+    <button class="menu-toggle" onclick="document.querySelector('.menu-links').classList.toggle('menu-visible')">☰</button>
+    <div class="menu-links">
+      <a href="biografia.html">Biografía</a>
+      <a href="music.html">Música</a>
+      <a href="fotos.html">Fotos</a>
+      <a href="shows.html">Shows</a>
+      <a href="#contacto">Contacto</a>
+    </div><img src="portada-nueva.jpg" alt="BÖWÖ" class="logo-principal" />
+<h1>BÖWÖ</h1>
+<p>Música electrónica que fusiona ritmos y sonidos autóctonos de tambores, instrumentos étnicos del mundo, marimba y otras percusiones en vivo.</p>
+
+<nav class="redes">
+  <a href="https://open.spotify.com/artist/4h1OOLXeOv8ynr2DCIgPa" target="_blank">Spotify</a>
+  <a href="https://youtu.be/5-DDM8jALYw?si=6tpVTK7B5gQQ3SE" target="_blank">YouTube</a>
+  <a href="mailto:bowomusicper@gmail.com">Correo</a>
+  <a href="https://wa.me/34665842064" target="_blank">WhatsApp</a>
+  <a href="https://www.instagram.com/bowo_music" target="_blank">Instagram</a>
+</nav>
+
+  </header>  <main>
+    <section class="galeria-preview">
+      <h2>Galería / Gallery</h2>
+      <div class="galeria">
+        <a href="fotos.html">
+          <img src="FB_IMG_1742252036662.jpg" alt="BÖWÖ preview 1" />
+        </a>
+        <a href="fotos.html">
+          <img src="FB_IMG_1742252048563.jpg" alt="BÖWÖ preview 2" />
+        </a>
+      </div>
+      <p><a href="fotos.html" class="ver-galeria">Ver galería completa</a></p>
+    </section><section id="contacto" class="booking">
+  <h2>Booking / Contrataciones</h2>
+  <form name="contacto">
+    <input type="text" name="nombre" placeholder="Tu nombre / Your name" required />
+    <input type="email" name="email" placeholder="Tu correo / Your email" required />
+    <textarea name="mensaje" placeholder="Tu mensaje / Your message" required></textarea>
+    <button type="submit">Enviar / Send</button>
+  </form>
+</section>
+
+<section class="qr-section">
+  <h3>Escanea para más info:</h3>
+  <div class="qr-container">
+    <img src="qrbowo.jpg" alt="QR BOWÖ">
+    QR BOWÖ
   </div>
-  <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/34665842064" class="whatsapp-float" target="_blank" title="WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-</a>
+</section>
+
+  </main>  <footer>
+    <p>&copy; 2025 BÖWÖ Música. Todos los derechos reservados. / All rights reserved.</p>
+  </footer>  <!-- Burbuja flotante de WhatsApp -->  <a href="https://wa.me/34665842064" class="whatsapp-float" target="_blank" title="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
 </body>
 </html>
