@@ -1,45 +1,240 @@
-body { margin: 0; background-color: #0d0c1d; color: white; font-family: Arial, sans-serif; }
+/* General */
+body {
+    margin: 0;
+    background-color: #0d0c1d;
+    color: white;
+    font-family: Arial, sans-serif;
+}
 
-/* Botón de menú hamburguesa */ .menu-toggle { position: absolute; top: 1rem; right: 1rem; font-size: 2rem; padding: 0.3rem; cursor: pointer; background-color: #835aff; border: none; border-radius: 99px; color: white; z-index: 1001; box-shadow: 0 0 12px #835aff; }
+/* Botón de menú hamburguesa */
+.menu-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #835aff;
+    border: none;
+    border-radius: 99px;
+    color: white;
+    padding: 0.3rem 1rem;
+    z-index: 1001;
+    box-shadow: 0 0 12px #835aff;
+}
 
-/* Menú desplegable */ .menu-links { display: none; position: absolute; right: 1rem; background-color: #1c1c2b; padding: 1rem; border-radius: 20px; z-index: 1000; box-shadow: 0 0 12px #835aff; }
+/* Menú desplegable */
+.menu-links {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    background-color: #1c1c2b;
+    padding: 1rem;
+    border-radius: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 12px #835aff;
+}
 
-.menu-links a { display: block; margin: 0.5rem 0; padding: 0.6rem 1.2rem; background-color: #5e3ea1; border-radius: 10px; color: #fff; text-align: center; font-weight: bold; text-decoration: none; font-size: 1.2rem; }
+.menu-links a {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.6rem 1.2rem;
+    background-color: #5e3ea1;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
 
-.menu-links a:hover { background-color: #9e79ff; color: black; }
+.menu-links a:hover {
+    background-color: #9e79ff;
+    color: black;
+}
 
-.menu-visible { display: block; }
+/* Portada y logo */
+.portada {
+    text-align: center;
+    padding: 2rem;
+}
 
-/* Portada y logo */ .portada img { max-width: 100%; border-radius: 20px; box-shadow: 0 0 20px #835aff; }
+.portada img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #835aff;
+}
 
-h1 { font-size: 3rem; margin-top: 1rem; color: #b6a8ff; text-shadow: 0 0 10px #835aff; text-align: center; }
+/* Títulos */
+h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: #b6a8ff;
+    text-shadow: 0 0 10px #835aff;
+}
 
-h2 { font-size: 2rem; color: #b6a8ff; margin: 2rem 0 1rem 0; text-align: center; }
+h2 {
+    font-size: 2rem;
+    color: #b6a8ff;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+}
 
-p { font-size: 1.2rem; padding: 1rem; text-align: center; }
+p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+}
 
-/* Redes sociales */ .redes a { display: inline-block; margin: 0.5rem; padding: 0.6rem 1.2rem; background-color: #835aff; border-radius: 20px; color: white; text-decoration: none; font-weight: bold; }
+/* Redes sociales */
+.redes a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #835aff;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-.redes a:hover { background-color: #a385ff; }
+.redes a:hover {
+    background-color: #a385ff;
+}
 
-/* Galería */ .galeria { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 2rem; }
+/* Galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
 
-.galeria img { max-width: 250px; border-radius: 20px; transition: transform 0.3s ease; box-shadow: 0 0 15px #835aff; }
+.galeria img {
+    max-width: 200px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #835aff;
+    transition: transform 0.3s ease;
+}
 
-.galeria img:hover { transform: scale(1.05); }
+.galeria img:hover {
+    transform: scale(1.05);
+}
 
-/* Código QR */ .qr-container { margin-top: 2rem; text-align: center; }
+/* Dossier y booking */
+.dossier, .booking {
+    text-align: center;
+    padding: 2rem;
+}
 
-.qr-container img { width: 120px; height: auto; border-radius: 20px; background-color: #1c1c2b; box-shadow: 0 0 15px #835aff; margin-bottom: 0.5rem; }
+.booking form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.qr-label { color: white; margin-top: 0.5rem; font-weight: bold; }
+.booking input, .booking textarea {
+    margin: 0.5rem;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 20px;
+    max-width: 90%;
+    width: 400px;
+    font-weight: bold;
+}
 
-/* Footer */ footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #aaa; }
+.booking button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #835aff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 12px #835aff;
+}
 
-/* Botón de WhatsApp flotante */ .whatsapp-float { position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; border-radius: 50%; overflow: hidden; background-color: white; box-shadow: 0 0 10px #25d366; }
+.booking button:hover {
+    background-color: #9e79ff;
+    color: black;
+}
 
-.whatsapp-float img { width: 100%; height: 100%; object-fit: contain; }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
 
+/* Botón de WhatsApp flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 10px #25d366;
+}
 
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
+/* Código QR */
+.qr-container {
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
+.qr-container img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+}
+
+.qr-box {
+    display: inline-block;
+    padding: 1rem;
+    background-color: #1c1c2b;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #835aff;
+}
+
+.qr-label {
+    color: white;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Ajustes de animación del QR */
+.qr-wrapper {
+    display: inline-block;
+    padding: 1rem;
+    background-color: #2a103b;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 20px #a36bff;
+}
+
+.qr-wrapper img {
+    width: 120px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.qr-label {
+    color: white;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+}
