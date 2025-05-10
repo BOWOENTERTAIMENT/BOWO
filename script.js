@@ -52,3 +52,13 @@ document.querySelector('.menu-toggle').addEventListener('click', function () {
     const menu = document.querySelector('.menu-links');
     menu.classList.toggle('menu-visible');
 });
+
+// Control del menú hamburguesa
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".menu-toggle");
+    const menuLinks = document.querySelector(".menu-links");
+
+    toggleButton.addEventListener("click", () => {
+        menuLinks.classList.toggle("menu-visible");
+    });
+});
