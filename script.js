@@ -45,3 +45,10 @@ const appearOnScroll = new IntersectionObserver((entries) => {
   });
 });
 observers.forEach(el => appearOnScroll.observe(el));
+
+
+// Función para abrir y cerrar el menú hamburguesa
+document.querySelector('.menu-toggle').addEventListener('click', function () {
+    const menu = document.querySelector('.menu-links');
+    menu.classList.toggle('menu-visible');
+});
