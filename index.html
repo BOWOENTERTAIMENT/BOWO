@@ -1,68 +1,71 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BÖWÖ - Percusión Electrónica y Entretenimiento</title>
-    <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÖWÖ Entertainment</title>
+    <link rel="stylesheet" href="estilos.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-<header class="portada">
-    <button class="menu-toggle">☰</button>
-    <div class="menu-links">
-        <a href="biografia.html">Biografía</a>
-        <a href="musica.html">Música</a>
-        <a href="fotos.html">Fotos</a>
-        <a href="shows.html">Shows</a>
-        <a href="contacto.html">Contacto</a>
-    </div>
-    <img src="portada-nueva.jpg" alt="BÖWÖ" class="logo-principal" />
-    <img src="bowo_logo_cleaned.png" alt="BÖWÖ logo" class="logo-dragon" />
-    <p>Música electrónica que fusiona ritmos y sonidos autóctonos de tambores, instrumentos étnicos del mundo, marimba y otras percusiones en vivo.</p>
-    <nav class="redes">
-        <a href="https://open.spotify.com/artist/4hXoLXe0vBynr2DC1qPgA" target="_blank">Spotify</a>
-        <a href="https://www.youtube.com/embed/5-DDM8jALYw?si=6tpvTKZB5gO03l5E" target="_blank">YouTube</a>
-        <a href="mailto:bowomusicper@gmail.com" target="_blank">Correo</a>
-        <a href="https://wa.me/34656480264" target="_blank">WhatsApp</a>
-        <a href="https://www.instagram.com/bowo_music" target="_blank">Instagram</a>
-    </nav>
-</header>
+    <!-- Botón de cambio de idioma -->
+    <div class="language-toggle">
+        <button id="es-btn" class="active">ES</button>
+        <button id="en-btn">EN</button>
+    </div><!-- Menú desplegable -->
+<button class="menu-toggle">☰</button>
+<nav class="menu-links">
+    <ul>
+        <li><a href="index.html">Inicio / Home</a></li>
+        <li><a href="biografia.html">Biografía / Biography</a></li>
+        <li><a href="music.html">Música / Music</a></li>
+        <li><a href="fotos.html">Fotos / Photos</a></li>
+        <li><a href="shows.html">Shows</a></li>
+        <li><a href="index.html#contact">Contacto / Contact</a></li>
+    </ul>
+</nav>
 
-<main>
-    <section class="galeria-preview">
-        <h2>Galería / Gallery</h2>
-        <div class="galeria">
-            <a href="fotos.html"><img src="FB_IMG_1742252036662.jpg" alt="BÖWÖ preview 1" /></a>
-            <a href="fotos.html"><img src="FB_IMG_1742252048563.jpg" alt="BÖWÖ preview 2" /></a>
-        </div>
-        <p><a href="fotos.html" class="ver-galeria">Ver galería completa</a></p>
-    </section>
+<!-- Contenido principal -->
+<div class="hero">
+    <img src="logo.png" alt="BÖWÖ Logo" class="logo">
+    <h1 data-es="Bienvenidos a BÖWÖ Entertainment" data-en="Welcome to BÖWÖ Entertainment">Bienvenidos a BÖWÖ Entertainment</h1>
+    <p data-es="Fusión mística de ritmos y energía sonora." data-en="Mystical fusion of rhythms and sonic energy.">Fusión mística de ritmos y energía sonora.</p>
+    <a href="#contact" class="cta-button" data-es="Contactar" data-en="Contact">Contactar</a>
+</div>
 
-    <section id="contacto" class="booking">
-        <h2>Booking / Contrataciones</h2>
-        <form>
-            <input type="text" name="nombre" placeholder="Tu nombre / Your name" required />
-            <input type="email" name="email" placeholder="Tu correo / Your email" required />
-            <textarea name="mensaje" placeholder="Tu mensaje / Your message" required></textarea>
-            <button type="submit">Enviar / Send</button>
-        </form>
-    </section>
+<!-- Sección de contacto -->
+<div id="contact" class="contact-section">
+    <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
+    <p data-es="Para contrataciones y más información, escanea el código QR o utiliza el formulario de contacto."
+       data-en="For bookings and more information, scan the QR code or use the contact form.">
+       Para contrataciones y más información, escanea el código QR o utiliza el formulario de contacto.
+    </p>
+    <img src="qrbowo.jpg" alt="QR BÖWÖ" class="qr-code">
+    <form action="mailto:josepablocalvo@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Tu nombre / Your name" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico / Your email" required>
+        <textarea name="message" placeholder="Tu mensaje / Your message" required></textarea>
+        <button type="submit" data-es="Enviar" data-en="Send">Enviar</button>
+    </form>
+</div>
 
-    <section class="qr-container">
-        <div class="qr-wrapper">
-            <img src="qrbowo.jpg" alt="QR BÖWÖ" class="qr-box" />
-            <p class="qr-label">QR BÖWÖ</p>
-        </div>
-    </section>
-</main>
+<script>
+    // Cambio de idioma
+    const esBtn = document.getElementById('es-btn');
+    const enBtn = document.getElementById('en-btn');
+    const elements = document.querySelectorAll('[data-es], [data-en]');
 
-<footer>
-    <p>© 2025 BÖWÖ Música. Todos los derechos reservados. / All rights reserved.</p>
-    <a href="https://wa.me/34656480264" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-    </a>
-</footer>
+    esBtn.addEventListener('click', () => {
+        elements.forEach(el => el.textContent = el.getAttribute('data-es'));
+        esBtn.classList.add('active');
+        enBtn.classList.remove('active');
+    });
+
+    enBtn.addEventListener('click', () => {
+        elements.forEach(el => el.textContent = el.getAttribute('data-en'));
+        enBtn.classList.add('active');
+        esBtn.classList.remove('active');
+    });
+</script>
 
 </body>
 </html>
